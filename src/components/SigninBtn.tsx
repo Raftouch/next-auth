@@ -1,3 +1,5 @@
+'use client'
+
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 
@@ -12,9 +14,9 @@ export default function SigninBtn() {
           <Link href={'/api/auth/signout'}>Sign Out</Link>
         </div>
       ) : (
-        <div>
-          <Link href={'/api/auth/signin'}>Sing In</Link>
-          <Link href={'/signup'}>Sing Up</Link>
+        <div className="flex gap-5">
+          <Link href={'/api/auth/signin'}>Sign In</Link>
+          <Link href={'/signup'}>Sign Up</Link>
         </div>
       )}
     </div>
